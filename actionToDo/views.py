@@ -130,10 +130,10 @@ def GetLastUpdate(request):
 def GetLastUpdate(request):
     if request.method == "POST":
         try:
-            if LastUpdate.objects.filter(id=0).count > 0:
-                update = LastUpdate.objects.filter(id=0)
+            if LastUpdate.objects.filter(id=1).count > 0:
+                update = LastUpdate.objects.filter(id=1)
 
-                json = LastUpdate.objects.filter(id=0).values(
+                json = LastUpdate.objects.filter(id=1).values(
                                                                   'lastUpdate',
                                                                )
                 return Response({"status": True, "data": json})
