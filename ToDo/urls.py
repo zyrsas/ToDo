@@ -20,5 +20,10 @@ from actionToDo import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^create/$', views.CreateToDO),
+    url(r'^edit/$', views.EditToDo),
+    url(r'^get_last_update/$', views.GetLastUpdate),
+    url(r'^set_last_update/$', views.SetLastUpdate),
     url(r'^complete/$', views.MarkCompleteToDo),
+    url(r'^get_list/$', views.ToDoLists.as_view()),
+
 ]
